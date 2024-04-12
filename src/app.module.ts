@@ -5,7 +5,6 @@ import { FilmeModule } from './filme/filme.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { CacheModule } from '@nestjs/cache-manager';
-import { HealthModule } from './health/health.module';
 import * as redisStore from 'cache-manager-redis-store';
 
 @Module({
@@ -34,7 +33,6 @@ import * as redisStore from 'cache-manager-redis-store';
       password: process.env.REDIS_PASSWORD,
       no_ready_check: true,
     }),
-    HealthModule,
   ],
   controllers: [],
   providers: [],

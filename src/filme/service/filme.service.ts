@@ -17,15 +17,14 @@ export class FilmeService {
     ) {}
 
     async findAll(): Promise<Filme[]> {
-        const cachedData = await this.cacheService.get<Filme[]>("tudo");
+        const cachedData = await this.cacheService.get<Filme[]>("all");
 
         if (cachedData) {
             return cachedData;
         }
 
         const filmes = await this.filmeRepository.find();
-        await this.cacheService.set("tudo", filmes);
-        console.log('data set to cache');
+        await this.cacheService.set("all", filmes);
         return filmes;
     }
 
@@ -37,7 +36,6 @@ export class FilmeService {
         const cachedData = await this.cacheService.get<Filme>(id.toString());
 
         if (cachedData) {
-            console.log('data from cache');
             return cachedData;
         }
 
@@ -48,7 +46,6 @@ export class FilmeService {
         }
 
         await this.cacheService.set(id.toString(), filmeBuscado);
-        console.log('data set to cache');
         return filmeBuscado;
     } 
 
