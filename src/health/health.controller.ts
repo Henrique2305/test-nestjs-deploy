@@ -10,24 +10,24 @@ export class HealthController {
         private db: TypeOrmHealthIndicator
       ) {}
 
-    @Get()
-    @HealthCheck()
-    check() {
-        return this.health.check([
-          async () =>
-            this.microservice.pingCheck<TcpClientOptions>('tcp', {
-              transport: Transport.TCP,
-              options: { host: 'localhost', port: 3001 },
-            }),
-          async () =>
-            this.microservice.pingCheck<RedisOptions>('redis', {
-              transport: Transport.REDIS,
-              options: {
-                host: 'localhost',
-                port: 6379,
-              },
-            }),
-          async () => this.db.pingCheck('database'),
-        ]);
-      }
+    // @Get()
+    // @HealthCheck()
+    // check() {
+    //     return this.health.check([
+    //       async () =>
+    //         this.microservice.pingCheck<TcpClientOptions>('tcp', {
+    //           transport: Transport.TCP,
+    //           options: { host: 'localhost', port: 3001 },
+    //         }),
+    //       async () =>
+    //         this.microservice.pingCheck<RedisOptions>('redis', {
+    //           transport: Transport.REDIS,
+    //           options: {
+    //             host: 'localhost',
+    //             port: 6379,
+    //           },
+    //         }),
+    //       async () => this.db.pingCheck('database'),
+    //     ]);
+    //   }
 }
