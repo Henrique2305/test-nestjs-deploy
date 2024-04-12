@@ -16,19 +16,19 @@ O projeto é uma API RESTful de filmes que utiliza o Redis como seu cache e o JW
 - ``PostgreSQL``    experiência: menos de um 1 ano
 
 ## Modo de uso
-Para cadastrar um usuário:
-POST: https://new-test-nestjs-deploy.onrender.com/usuario
-
-E adicione o body, por exemplo:
-{
-    "username": "john",
-    "password": "chang"
-}
 
 Faça uma requisição para:
 POST: https://new-test-nestjs-deploy.onrender.com/auth/login
 
-E pegue o token gerado.
+E adicione no body o usuário:
+{
+    "username": "john",
+    "password": "changeme"
+}
+
+Pegue o token gerado.
+
+Utilize esse token nos outros endpoints.
 
 Acesse esse path da documentação do Swagger para ver os endpoints do projeto:
 https://new-test-nestjs-deploy.onrender.com/api
