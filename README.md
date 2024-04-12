@@ -7,13 +7,13 @@ O projeto é uma API RESTful de filmes que utiliza o Redis como seu cache e o JW
 
 ## ✔️ Tecnologias utilizadas
 
-- ``TypeScript``
-- ``NestJS``
-- ``TypeORM``
-- ``Swagger``
-- ``Docker``
-- ``Redis``
-- ``PostgreSQL``
+- ``TypeScript``    experiência: menos de um 1 ano
+- ``NestJS``        experiência: menos de um 1 ano
+- ``TypeORM``       experiência: menos de um 1 ano
+- ``Swagger``       experiência: menos de um 1 ano
+- ``Docker``        experiência: menos de um 1 ano
+- ``Redis``         experiência: recente
+- ``PostgreSQL``    experiência: menos de um 1 ano
 
 ## Modo de uso
 Para cadastrar um usuário:
