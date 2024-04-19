@@ -5,7 +5,7 @@
 ## Descrição
 O projeto é uma API RESTful de filmes que utiliza o Redis como seu cache e o JWT para autenticação.
 
-## ✔️ Tecnologias utilizadas
+## 🛠 Tecnologias
 
 - ``TypeScript``    experiência: menos de um 1 ano
 - ``NestJS``        experiência: menos de um 1 ano
